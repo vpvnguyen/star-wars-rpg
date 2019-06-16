@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Star Wars RPG</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col center-block">
+                <div id="bad"></div>
+                <div id="good"></div>
+            </div>
+        </div>
+    </div>
+<script>
+// characters
+// ATK / DEF
+// effect dom
+// (pick a character)
+// score system
+
+var heroes = {
+    hero1: {
+        name: 'vader',
+        hp: 200,
+        atk: 50,
+    },
+    hero2: {
+        name: 'luke',
+        hp: 120,
+        atk: 25,
+    },
+    hero3: {
+        name: 'solo',
+        hp: 180,
+        atk: 20,
+    },
+    hero4: {
+        name: 'maul',
+        hp: 190,
+        atk: 40,
+    },
+    getHeroes: function() {
+        return this.hero1.name;
+    }
+};
+
+// pick through object of heroes and display possible choices
+var pickHero = function() {
+    $('#bad').append(`<div> ${heroes.hero1.name}`);
+    $('')
+    $('#good').append(`<div> ${heroes.hero2.name}`);
+}
+pickHero();
+console.log(heroes.getHeroes());
+heroes.getHeroes;
+
+
+
+</script>
+</body>
+</html>
